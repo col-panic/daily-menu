@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmlns:ui="http://www.eclipse.org/ui/2010/UIModel/application/ui" xmi:id="_uo1rgEeMEeK0fZNfOuLUJA" elementId="org.eclipse.e4.ide.application" bindingContexts="_uo2SlkeMEeK0fZNfOuLUJA">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_uo1rgUeMEeK0fZNfOuLUJA" elementId="at.medevit.menus.trimmedWindow.main" label="" width="500" height="400">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_uo25o0eMEeK0fZNfOuLUJA" elementId="at.medevit.menus.trimmedWindow.main.perspectiveStack">
+      <children xsi:type="advanced:Perspective" xmi:id="_uo25pEeMEeK0fZNfOuLUJA" elementId="at.medevit.menus.trimmedWindow.main.perspective">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_uo25pUeMEeK0fZNfOuLUJA" elementId="at.medevit.menus.trimmedWindow.main.partSashContainer" horizontal="true">
+          <children xsi:type="basic:PartStack" xmi:id="_uo25pkeMEeK0fZNfOuLUJA" elementId="at.medevit.menus.trimmedWindow.main.partStack.selector" containerData="50">
+            <children xsi:type="basic:Part" xmi:id="_uo25p0eMEeK0fZNfOuLUJA" elementId="at.medevit.menus.trimmedWindow.main.partStack.selector.selectPart" contributionURI="bundleclass://at.medevit.menus/at.medevit.menus.parts.SelectorPart" label="Select Person">
+              <tags>NoMove</tags>
+              <menus xmi:id="_1yTpwFi9EeKJUNNoTzupGA" elementId="at.medevit.menus.menu.personManagement">
+                <tags>ViewMenu</tags>
+                <children xsi:type="menu:MenuSeparator" xmi:id="_6WXW0FmZEeKOgq5STJoGLQ" elementId="at.medevit.menus.menu.personManagement.beginHook" visible="false"/>
+                <children xsi:type="menu:Menu" xmi:id="_WiV80Fl4EeKWw8kB-1fJYA" elementId="menu.filter" label="Filter"/>
+              </menus>
+              <menus xsi:type="menu:PopupMenu" xmi:id="_2ZiB0Fi9EeKJUNNoTzupGA" elementId="at.medevit.menus.part.selectPersonViewer.popupmenu">
+                <children xsi:type="menu:HandledMenuItem" xmi:id="_fyyNcFl4EeKWw8kB-1fJYA" elementId="at.medevit.menus.handledmenuitem.0" label="Delete Person" command="_alMYMFi9EeKJUNNoTzupGA"/>
+                <children xsi:type="menu:Menu" xmi:id="_Ox_GcFmaEeKOgq5STJoGLQ" elementId="at.medevit.menus.part.selectPersonViewer.popupmenu.partnerMenu" label="Partner">
+                  <children xsi:type="menu:DynamicMenuContribution" xmi:id="_JTeEkAp4EeK8ULSwuUCzow" elementId="at.medevit.menus.dynamic.dynamicPartnerContribution" label="irrelevantLabelWillNotBeShown" contributionURI="bundleclass://at.medevit.menus/at.medevit.menus.dynamic.DynamicPartnerContribution"/>
+                </children>
+                <children xsi:type="menu:DirectMenuItem" xmi:id="_WAGS8FmaEeKOgq5STJoGLQ" elementId="at.medevit.menus.part.selectPersonViewer.popupmenu.pregnant" label="Pregnant" type="Check" contributionURI="bundleclass://at.medevit.menus/at.medevit.menus.handlers.DirectPregnantStateHandler">
+                  <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_1T8M4GOsEeKfG-npQUEi0g" coreExpressionId="at.medevit.menus.expression.showPregnancyOption"/>
+                </children>
+              </menus>
+              <toolbar xmi:id="_CehM4FmeEeKOgq5STJoGLQ" elementId="at.medevit.menus.trimmedWindow.main.partStack.selector.selectPart.toolbar">
+                <children xsi:type="menu:HandledToolItem" xmi:id="_vWMbsFmeEeKOgq5STJoGLQ" elementId="at.medevit.menus.handledtoolitem.0" iconURI="platform:/plugin/at.medevit.menus/icons/funnel.png" tooltip="">
+                  <menu xmi:id="_8aIMEFmeEeKOgq5STJoGLQ" elementId="menu.filter" label="Filter"/>
+                </children>
+              </toolbar>
+            </children>
+          </children>
+          <children xsi:type="basic:PartStack" xmi:id="_8H1f4FimEeK6JpgqlQDxrQ" elementId="at.medevit.menus.trimmedWindow.main.partStack.detail" containerData="50">
+            <children xsi:type="basic:Part" xmi:id="_Icr8sFinEeK6JpgqlQDxrQ" elementId="at.medevit.menus.trimmedWindow.main.partStack.detail.detailPart" contributionURI="bundleclass://at.medevit.menus/at.medevit.menus.parts.PersonDetailPart" label="Person Details"/>
+          </children>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_uo2SpkeMEeK0fZNfOuLUJA" elementId="menu:org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_uo2Sp0eMEeK0fZNfOuLUJA" elementId="at.medevit.menus.mainmenu.file" label="File" mnemonics="">
+        <tags>justatag</tags>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_uo25oEeMEeK0fZNfOuLUJA" label="Quit" command="_uo2SmUeMEeK0fZNfOuLUJA"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_uo25oUeMEeK0fZNfOuLUJA" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_uo25okeMEeK0fZNfOuLUJA" label="About" command="_uo2So0eMEeK0fZNfOuLUJA"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_UuLHgGOfEeKfG-npQUEi0g" elementId="at.medevit.menus.menu.personManagement" label="Person">
+        <children xsi:type="menu:MenuSeparator" xmi:id="_gh2J4GOfEeKfG-npQUEi0g" elementId="at.medevit.menus.menu.personManagement.beginHook" visible="false"/>
+      </children>
+    </mainMenu>
+  </children>
+  <handlers xmi:id="_uo2SmkeMEeK0fZNfOuLUJA" contributionURI="bundleclass://at.medevit.menus/at.medevit.menus.handlers.QuitHandler" command="_uo2SmUeMEeK0fZNfOuLUJA"/>
+  <handlers xmi:id="_uo2SnkeMEeK0fZNfOuLUJA" contributionURI="bundleclass://at.medevit.menus/at.medevit.menus.handlers.OpenHandler" command="_uo2SnUeMEeK0fZNfOuLUJA"/>
+  <handlers xmi:id="_uo2SoUeMEeK0fZNfOuLUJA" contributionURI="bundleclass://at.medevit.menus/at.medevit.menus.handlers.SaveHandler" command="_uo2SoEeMEeK0fZNfOuLUJA"/>
+  <handlers xmi:id="_uo2SpEeMEeK0fZNfOuLUJA" contributionURI="bundleclass://at.medevit.menus/at.medevit.menus.handlers.AboutHandler" command="_uo2So0eMEeK0fZNfOuLUJA"/>
+  <handlers xmi:id="_kitMIFlrEeKWw8kB-1fJYA" elementId="" contributionURI="bundleclass://at.medevit.menus/at.medevit.menus.handlers.AddPersonHandler" command="_YaL5MFi9EeKJUNNoTzupGA"/>
+  <handlers xmi:id="_z0X_YFlrEeKWw8kB-1fJYA" elementId="" contributionURI="bundleclass://at.medevit.menus/at.medevit.menus.handlers.DeletePersonHandler" command="_alMYMFi9EeKJUNNoTzupGA"/>
+  <handlers xmi:id="_dvApUGO0EeKfG-npQUEi0g" elementId="at.medevit.menus.handler.0" contributionURI="bundleclass://at.medevit.menus/at.medevit.menus.handlers.StatefulPersonViewerFilterHandler" command="_Yg1UQGO0EeKfG-npQUEi0g"/>
+  <bindingTables xmi:id="_uo2Sm0eMEeK0fZNfOuLUJA" bindingContext="_uo2SlkeMEeK0fZNfOuLUJA">
+    <bindings xmi:id="_uo2SnEeMEeK0fZNfOuLUJA" keySequence="M1+Q" command="_uo2SmUeMEeK0fZNfOuLUJA"/>
+    <bindings xmi:id="_uo2Sn0eMEeK0fZNfOuLUJA" keySequence="M1+O" command="_uo2SnUeMEeK0fZNfOuLUJA"/>
+    <bindings xmi:id="_uo2SokeMEeK0fZNfOuLUJA" keySequence="M1+S" command="_uo2SoEeMEeK0fZNfOuLUJA"/>
+    <bindings xmi:id="_uo2SpUeMEeK0fZNfOuLUJA" keySequence="M1+A" command="_uo2So0eMEeK0fZNfOuLUJA"/>
+  </bindingTables>
+  <rootContext xmi:id="_uo2SlkeMEeK0fZNfOuLUJA" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_uo2Sl0eMEeK0fZNfOuLUJA" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_uo2SmEeMEeK0fZNfOuLUJA" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <menuContributions xmi:id="_4ZPtMFl1EeKWw8kB-1fJYA" elementId="at.medevit.menus.menucontribution.0" positionInParent="after=at.medevit.menus.menu.personManagement.beginHook" parentId="at.medevit.menus.menu.personManagement">
+    <children xsi:type="menu:HandledMenuItem" xmi:id="_A9QgMFl3EeKWw8kB-1fJYA" label="Add Person" command="_YaL5MFi9EeKJUNNoTzupGA"/>
+  </menuContributions>
+  <menuContributions xmi:id="_OKKUoFmeEeKOgq5STJoGLQ" elementId="at.medevit.menus.menucontribution.1" parentId="menu.filter">
+    <children xsi:type="menu:HandledMenuItem" xmi:id="_QNY00FmXEeKOgq5STJoGLQ" elementId="at.medevit.menus.handledmenuitem.filter.Male" label="Male" type="Radio" command="_Yg1UQGO0EeKfG-npQUEi0g">
+      <parameters xmi:id="_oFtdwGO8EeKfG-npQUEi0g" elementId="" name="org.eclipse.ui.commands.radioStateParameter" value="MALE"/>
+    </children>
+    <children xsi:type="menu:HandledMenuItem" xmi:id="_TpXMcFmXEeKOgq5STJoGLQ" elementId="at.medevit.menus.handledmenuitem.filter.Female" label="Female" type="Radio" command="_Yg1UQGO0EeKfG-npQUEi0g">
+      <parameters xmi:id="_qUJEMGO8EeKfG-npQUEi0g" elementId="" name="org.eclipse.ui.commands.radioStateParameter" value="FEMALE"/>
+    </children>
+    <children xsi:type="menu:HandledMenuItem" xmi:id="_WT3D0FmXEeKOgq5STJoGLQ" elementId="at.medevit.menus.handledmenuitem.filter.Both" label="Both" type="Radio" command="_Yg1UQGO0EeKfG-npQUEi0g">
+      <parameters xmi:id="_rWZLYGO8EeKfG-npQUEi0g" elementId="" name="org.eclipse.ui.commands.radioStateParameter" value="BOTH"/>
+    </children>
+    <children xsi:type="menu:MenuSeparator" xmi:id="_ZfZLsFmXEeKOgq5STJoGLQ" elementId="at.medevit.menus.menuseparator.0"/>
+    <children xsi:type="menu:HandledMenuItem" xmi:id="_aFneMFmXEeKOgq5STJoGLQ" elementId="at.medevit.menus.handledmenuitem.filter.SingleOnly" label="Single" type="Check" command="_nHBmQF2NEeKjNboA0MaABg"/>
+  </menuContributions>
+  <commands xmi:id="_uo2SmUeMEeK0fZNfOuLUJA" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_uo2SnUeMEeK0fZNfOuLUJA" elementId="at.medevit.menus.open" commandName="openCommand"/>
+  <commands xmi:id="_uo2SoEeMEeK0fZNfOuLUJA" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
+  <commands xmi:id="_uo2So0eMEeK0fZNfOuLUJA" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <commands xmi:id="_YaL5MFi9EeKJUNNoTzupGA" elementId="at.medevit.menus.command.AddPerson" commandName="add person" category="_U0KNsFi9EeKJUNNoTzupGA"/>
+  <commands xmi:id="_alMYMFi9EeKJUNNoTzupGA" elementId="at.medevit.menus.command.deletePerson" commandName="delete person" category="_U0KNsFi9EeKJUNNoTzupGA"/>
+  <commands xmi:id="_nHBmQF2NEeKjNboA0MaABg" elementId="at.medevit.menus.command.filter.showSingleOnly" commandName="stateful show single only" category="_OnRLcF2QEeKjNboA0MaABg"/>
+  <commands xmi:id="_Yg1UQGO0EeKfG-npQUEi0g" elementId="at.medevit.menus.command.filter.FilterState" commandName="stateful person viewer filter" category="_OnRLcF2QEeKjNboA0MaABg">
+    <parameters xmi:id="_fzqIAGO8EeKfG-npQUEi0g" elementId="org.eclipse.ui.commands.radioStateParameter" name="" optional="false"/>
+  </commands>
+  <addons xmi:id="_uo2SkEeMEeK0fZNfOuLUJA" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_uo2SkUeMEeK0fZNfOuLUJA" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_uo2SkkeMEeK0fZNfOuLUJA" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_uo2Sk0eMEeK0fZNfOuLUJA" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_uo2SlEeMEeK0fZNfOuLUJA" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_uo2SlUeMEeK0fZNfOuLUJA" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+  <addons xmi:id="_24-8wEeMEeK0fZNfOuLUJA" elementId="org.eclipse.e4.ui.workbench.handlers.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <categories xmi:id="_U0KNsFi9EeKJUNNoTzupGA" elementId="at.medevit.menus.category.personManagement" name="person management" description="contains all commands to manage the person objects"/>
+  <categories xmi:id="_OnRLcF2QEeKjNboA0MaABg" elementId="at.medevit.menus.category.viewerFilter" name="viewer filter"/>
+</application:Application>

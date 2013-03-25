@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            name="at.medevit.menus"
+            application="org.eclipse.e4.ui.workbench.swt.E4Application">
+         <property
+               name="clearPersistedState"
+               value="true">
+         </property>
+         <property
+               name="applicationCSS"
+               value="platform:/plugin/at.medevit.menus/css/default.css">
+         </property>
+         <property
+               name="appName"
+               value="at.medevit.menus">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="at.medevit.menus.expression.showPregnancyOption">
+         <test
+               forcePluginActivation="true"
+               property="at.medevit.menus.propertyTester.person.isFemale">
+         </test>
+      </definition>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="at.medevit.menus.propertytester.PersonGenderProperty"
+            id="at.medevit.menus.propertyTester.person.PersonGenderIsFemale"
+            namespace="at.medevit.menus.propertyTester.person"
+            properties="isFemale"
+            type="java.lang.Object">
+      </propertyTester>
+   </extension>
+
+</plugin>
