@@ -123,13 +123,22 @@ public interface MenusPackage extends EPackage {
 	int PERSON__PREGNANT = 4;
 
 	/**
+	 * The feature id for the '<em><b>Date Of Birth</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSON__DATE_OF_BIRTH = 5;
+
+	/**
 	 * The number of structural features of the '<em>Person</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON_FEATURE_COUNT = 5;
+	int PERSON_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Person</em>' class.
@@ -254,6 +263,17 @@ public interface MenusPackage extends EPackage {
 	EAttribute getPerson_Pregnant();
 
 	/**
+	 * Returns the meta object for the attribute '{@link at.medevit.menus.Person#getDateOfBirth <em>Date Of Birth</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Date Of Birth</em>'.
+	 * @see at.medevit.menus.Person#getDateOfBirth()
+	 * @see #getPerson()
+	 * @generated
+	 */
+	EAttribute getPerson_DateOfBirth();
+
+	/**
 	 * Returns the meta object for class '{@link at.medevit.menus.PersonDirectory <em>Person Directory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -356,6 +376,14 @@ public interface MenusPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PERSON__PREGNANT = eINSTANCE.getPerson_Pregnant();
+
+		/**
+		 * The meta object literal for the '<em><b>Date Of Birth</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PERSON__DATE_OF_BIRTH = eINSTANCE.getPerson_DateOfBirth();
 
 		/**
 		 * The meta object literal for the '{@link at.medevit.menus.impl.PersonDirectoryImpl <em>Person Directory</em>}' class.

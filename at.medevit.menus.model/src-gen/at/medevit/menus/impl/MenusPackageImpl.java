@@ -174,6 +174,15 @@ public class MenusPackageImpl extends EPackageImpl implements MenusPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getPerson_DateOfBirth() {
+		return (EAttribute)personEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPersonDirectory() {
 		return personDirectoryEClass;
 	}
@@ -230,6 +239,7 @@ public class MenusPackageImpl extends EPackageImpl implements MenusPackage {
 		createEAttribute(personEClass, PERSON__SEX);
 		createEReference(personEClass, PERSON__PARTNER);
 		createEAttribute(personEClass, PERSON__PREGNANT);
+		createEAttribute(personEClass, PERSON__DATE_OF_BIRTH);
 
 		personDirectoryEClass = createEClass(PERSON_DIRECTORY);
 		createEReference(personDirectoryEClass, PERSON_DIRECTORY__ENTRY);
@@ -274,6 +284,7 @@ public class MenusPackageImpl extends EPackageImpl implements MenusPackage {
 		initEAttribute(getPerson_Sex(), this.getGender(), "sex", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPerson_Partner(), this.getPerson(), null, "partner", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPerson_Pregnant(), ecorePackage.getEBoolean(), "pregnant", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPerson_DateOfBirth(), ecorePackage.getEDate(), "dateOfBirth", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(personDirectoryEClass, PersonDirectory.class, "PersonDirectory", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPersonDirectory_Entry(), this.getPerson(), null, "entry", null, 0, -1, PersonDirectory.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -16,6 +16,7 @@ import at.medevit.menus.Gender;
 import at.medevit.menus.MenusPackage;
 import at.medevit.menus.Person;
 
+import java.util.Date;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -36,6 +37,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link at.medevit.menus.impl.PersonImpl#getSex <em>Sex</em>}</li>
  *   <li>{@link at.medevit.menus.impl.PersonImpl#getPartner <em>Partner</em>}</li>
  *   <li>{@link at.medevit.menus.impl.PersonImpl#isPregnant <em>Pregnant</em>}</li>
+ *   <li>{@link at.medevit.menus.impl.PersonImpl#getDateOfBirth <em>Date Of Birth</em>}</li>
  * </ul>
  * </p>
  *
@@ -140,6 +142,26 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * @ordered
 	 */
 	protected boolean pregnant = PREGNANT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDateOfBirth() <em>Date Of Birth</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDateOfBirth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date DATE_OF_BIRTH_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDateOfBirth() <em>Date Of Birth</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDateOfBirth()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date dateOfBirth = DATE_OF_BIRTH_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -312,6 +334,27 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDateOfBirth(Date newDateOfBirth) {
+		Date oldDateOfBirth = dateOfBirth;
+		dateOfBirth = newDateOfBirth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MenusPackage.PERSON__DATE_OF_BIRTH, oldDateOfBirth, dateOfBirth));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -326,6 +369,8 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 				return basicGetPartner();
 			case MenusPackage.PERSON__PREGNANT:
 				return isPregnant();
+			case MenusPackage.PERSON__DATE_OF_BIRTH:
+				return getDateOfBirth();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -352,6 +397,9 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 				return;
 			case MenusPackage.PERSON__PREGNANT:
 				setPregnant((Boolean)newValue);
+				return;
+			case MenusPackage.PERSON__DATE_OF_BIRTH:
+				setDateOfBirth((Date)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -380,6 +428,9 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 			case MenusPackage.PERSON__PREGNANT:
 				setPregnant(PREGNANT_EDEFAULT);
 				return;
+			case MenusPackage.PERSON__DATE_OF_BIRTH:
+				setDateOfBirth(DATE_OF_BIRTH_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -402,6 +453,8 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 				return isSetPartner();
 			case MenusPackage.PERSON__PREGNANT:
 				return pregnant != PREGNANT_EDEFAULT;
+			case MenusPackage.PERSON__DATE_OF_BIRTH:
+				return DATE_OF_BIRTH_EDEFAULT == null ? dateOfBirth != null : !DATE_OF_BIRTH_EDEFAULT.equals(dateOfBirth);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -424,6 +477,8 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 		result.append(sex);
 		result.append(", pregnant: ");
 		result.append(pregnant);
+		result.append(", dateOfBirth: ");
+		result.append(dateOfBirth);
 		result.append(')');
 		return result.toString();
 	}

@@ -38,7 +38,7 @@ public class MenusFactoryImpl extends EFactoryImpl implements MenusFactory {
 	 */
 	public static MenusFactory init() {
 		try {
-			MenusFactory theMenusFactory = (MenusFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.medevit.at/menus/"); 
+			MenusFactory theMenusFactory = (MenusFactory)EPackage.Registry.INSTANCE.getEFactory(MenusPackage.eNS_URI);
 			if (theMenusFactory != null) {
 				return theMenusFactory;
 			}

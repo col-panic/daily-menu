@@ -11,7 +11,10 @@
 package at.medevit.menus;
 
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notification;
@@ -47,17 +50,25 @@ public class SampleModel {
 		// Create a resource
 		resource = resSet.createResource(URI.createURI("menus/my.model"));
 
+		Calendar cal = GregorianCalendar.getInstance();
+		
 		PersonDirectory pd = factory.createPersonDirectory();
 
 		Person personA = factory.createPerson();
 		personA.setFirstname("Max");
 		personA.setLastname("Mustermann");
 		personA.setSex(Gender.MALE);
+		cal.clear();
+		cal.set(1979, 6, 26);
+		personA.setDateOfBirth(new Date(cal.getTimeInMillis()));
 	
 		Person personB = factory.createPerson();
 		personB.setFirstname("Maria");
 		personB.setLastname("Musterfrau");
 		personB.setSex(Gender.FEMALE);
+		cal.clear();
+		cal.set(1979, 9, 19);
+		personB.setDateOfBirth(new Date(cal.getTimeInMillis()));
 
 		personA.setPartner(personB);
 		personB.setPartner(personA);
